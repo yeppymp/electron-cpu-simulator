@@ -119,14 +119,20 @@
                     <q-icon name="fas fa-angle-down" />)
                   </q-tooltip>
                 </q-td>
-                <q-td key="address" :id="props.row.address" :props="props">{{ props.row.address }}</q-td>
+                <q-td key="address" :id="props.row.address" :props="props">{{
+                  props.row.address
+                }}</q-td>
               </q-tr>
             </template>
           </q-table>
 
           <div class="row">
             <div class="col q-mr-md">
-              <q-btn class="full-width glossy q-mt-md" @click="reset" label="Reset" />
+              <q-btn
+                class="full-width glossy q-mt-md"
+                @click="reset"
+                label="Reset"
+              />
             </div>
             <div class="col">
               <q-btn
@@ -399,7 +405,9 @@ export default {
           flag.classList.remove("blink-card");
           r1.classList.add("blink-card");
           vm.r1 = result;
-          vm.status.text = `JUMP to ${vm.to16BitsBinary(vm.instructions[2].id)}`
+          vm.status.text = `JUMP to ${vm.to16BitsBinary(
+            vm.instructions[2].id
+          )}`;
         }, 12000);
 
         setTimeout(function() {
